@@ -90,7 +90,7 @@
 ---
 
 ## Phase 8 — Documentation & delivery
-- [ ] **T8.1** Write `README.md`: purpose, build/run instructions, example session, architecture summary.
+- [x] **T8.1** Write `README.md`: purpose, build/run instructions, example session, architecture summary.
 - [ ] **T8.2** Cross-check `spec.md` ↔ implementation: every FR covered by ≥1 test.
 - [ ] **T8.3** `dotnet format` + final warning-free build; run full test suite.
 - [ ] **T8.4** Tag release `v1.0`; final commit.
