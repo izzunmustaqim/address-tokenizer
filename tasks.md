@@ -17,10 +17,10 @@
 ---
 
 ## Phase 1 — Domain model & reference data
-- [ ] **T1.1** Implement `ParsedAddress` (nullable string properties, canonical member order).
-- [ ] **T1.2** Implement `ReferenceData`: cities (13), states (11), street prefixes (4) as read-only, case-insensitive lookups.
-- [ ] **T1.3** Unit tests: every city/state in the spec resolves; unknown value does not.
-- [ ] **T1.4** Implement `TokenSpan` (candidate text + consume/remainder mechanics).
+- [x] **T1.1** Implement `ParsedAddress` (nullable string properties, canonical member order).
+- [x] **T1.2** Implement `ReferenceData`: cities (13), states (11), street prefixes (4) as read-only, case-insensitive lookups.
+- [x] **T1.3** Unit tests: every city/state in the spec resolves; unknown value does not.
+- [x] **T1.4** Implement `TokenSpan` (candidate text + consume/remainder mechanics).
 
 **Exit criteria:** reference data matches `spec.md` §5 exactly; tests green.
 
