@@ -6,11 +6,11 @@
 ---
 
 ## Phase 0 — Setup
-- [ ] **T0.1** Initialize .NET 10 solution: `AddressTokenizer.sln` with projects `AddressTokenizer.Spec` (classlib), `AddressTokenizer.Cli` (console), `AddressTokenizer.Tests` (xUnit). SDK check: `dotnet --version` → 10.0.x.
-- [ ] **T0.2** Add project references: `Cli → Spec`, `Tests → Spec`.
-- [ ] **T0.3** Enable nullable reference types + `TreatWarningsAsErrors`; verify clean build (`dotnet build`).
-- [ ] **T0.4** Create folder skeleton per `design.md` §5 (Domain, Rules, Application, Tokenization, Infrastructure).
-- [ ] **T0.5** Commit initial scaffold.
+- [x] **T0.1** Initialize .NET 10 solution: `AddressTokenizer.sln` with projects `AddressTokenizer.Spec` (classlib), `AddressTokenizer.Cli` (console), `AddressTokenizer.Tests` (xUnit). SDK check: `dotnet --version` → 10.0.x.
+- [x] **T0.2** Add project references: `Cli → Spec`, `Tests → Spec`.
+- [x] **T0.3** Enable nullable reference types + `TreatWarningsAsErrors`; verify clean build (`dotnet build`).
+- [x] **T0.4** Create folder skeleton per `design.md` §5 (Domain, Rules, Application, Tokenization, Infrastructure).
+- [x] **T0.5** Commit initial scaffold.
 
 **Exit criteria:** `dotnet test` runs (0 tests), zero warnings.
 
