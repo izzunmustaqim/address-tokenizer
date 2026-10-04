@@ -27,14 +27,14 @@
 ---
 
 ## Phase 2 — Rule chain (Chain of Responsibility)
-- [ ] **T2.1** Define `IParserRule` (`ComponentName`, `TryParse(TokenSpan, ParsedAddress)`).
-- [ ] **T2.2** `AptRule` — `No` + digits (`FR-2.1`); tests: `No 11` ✓, `No abc` ✗, `No11` ✗.
-- [ ] **T2.3** `PostcodeRule` — **exactly 5 digits**, value range 01000–98859 (`FR-2.4`); boundary tests: `01000` ✓, `98859` ✓, `00999` ✗, `98860` ✗, `99999` ✗, `1000` ✗ (4 digits), `000001` ✗ (6 digits).
-- [ ] **T2.4** `CityRule` — exact case-insensitive match (`FR-2.2`); tests incl. multi-word `Kuala Terengganu`, `Petaling Jaya`.
-- [ ] **T2.5** `StateRule` — exact case-insensitive match (`FR-2.3`); tests incl. `Pulau Pinang`.
-- [ ] **T2.6** `StreetRule` — prefixes `Jalan `, `Jln `, `Lorong `, `Persiaran` (`FR-2.5`); tests: case variants, `Persiaran` alone ✓, `Persiaran Utama` ✓, `PersiaranFoo` ✗.
-- [ ] **T2.7** `SectionRule` — catch-all remainder, single-space join (`FR-2.6`).
-- [ ] **T2.8** `ParserRuleFactory.BuildChain()` — encodes precedence `apt > postcode > city > state > street > section` (`FR-3.1`).
+- [x] **T2.1** Define `IParserRule` (`ComponentName`, `TryParse(TokenSpan, ParsedAddress)`).
+- [x] **T2.2** `AptRule` — `No` + digits (`FR-2.1`); tests: `No 11` ✓, `No abc` ✗, `No11` ✗.
+- [x] **T2.3** `PostcodeRule` — **exactly 5 digits**, value range 01000–98859 (`FR-2.4`); boundary tests: `01000` ✓, `98859` ✓, `00999` ✗, `98860` ✗, `99999` ✗, `1000` ✗ (4 digits), `000001` ✗ (6 digits).
+- [x] **T2.4** `CityRule` — exact case-insensitive match (`FR-2.2`); tests incl. multi-word `Kuala Terengganu`, `Petaling Jaya`.
+- [x] **T2.5** `StateRule` — exact case-insensitive match (`FR-2.3`); tests incl. `Pulau Pinang`.
+- [x] **T2.6** `StreetRule` — prefixes `Jalan `, `Jln `, `Lorong `, `Persiaran` (`FR-2.5`); tests: case variants, `Persiaran` alone ✓, `Persiaran Utama` ✓, `PersiaranFoo` ✗.
+- [x] **T2.7** `SectionRule` — catch-all remainder, single-space join (`FR-2.6`).
+- [x] **T2.8** `ParserRuleFactory.BuildChain()` — encodes precedence `apt > postcode > city > state > street > section` (`FR-3.1`).
 
 **Exit criteria:** every rule has match + no-match + edge tests; chain order verified.
 
