@@ -41,7 +41,7 @@
 ---
 
 ## Phase 3 — Tokenization (with/without commas)
-- [ ] **T3.1** Define `ITokenizer` strategy interface.
+- [x] **T3.1** Define `ITokenizer` strategy interface.
 - [ ] **T3.2** `CommaTokenizer` — split on `,` / `;` / newline into segments (hard boundaries), trim, drop empties; **each segment is then handed to the shared longest-match scanner** (so segment `21080 Kuala Terengganu` yields two tokens: `21080`, `Kuala Terengganu`).
 - [ ] **T3.3** Longest-match scanner (used in **both** modes, within every segment): try units in order — apt `/^No\s+\d+/`, 5-digit postcode, street (prefix + words until next protected unit or segment end), city/state full name — else one word (`FR-1.4`, design §3.3).
 - [ ] **T3.4** `TokenizerNormalizer` / selector — detect delimiters; choose strategy; collapse whitespace; **strip trailing punctuation (`.`, `,`, `;`, `:`) from every token in both modes** (`FR-1.5`). Tests: `Terengganu.` → `Terengganu`; `Jalan Chendering 21080` → street stops at `21080`.
