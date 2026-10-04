@@ -4,13 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project status
 
-This repository is currently **design-only**: it contains the specification documents for an Address Tokenizer assignment but no code yet. The source of truth for what to build is the four Markdown documents below — read `spec.md` (normative requirements, identified `FR-x`/`NFR-x`) and `design.md` (architecture) before writing code, and follow `tasks.md` (phased task checklist) to build it incrementally. The original assignment brief is `address_tokenizer_specification.md` plus the PDF; where the brief and `spec.md` disagree, `spec.md` is stricter (it refines ambiguous rules such as the postcode being *exactly* 5 digits).
+Implementation is underway: **Phases 0–2 are complete** (solution scaffold, domain model & reference data, rule chain with tests — 96 tests passing). Remaining: Phases 3–8 in `tasks.md` (tokenization, orchestration, JSON output, CLI, hardening, docs).
+
+The source of truth for what to build is the Markdown documents below — read `spec.md` (normative requirements, identified `FR-x`/`NFR-x`) and `design.md` (architecture) before writing code, and follow `tasks.md` (phased task checklist) to build it incrementally. The original assignment brief is `address_tokenizer_specification.md` plus the PDF; where the brief and `spec.md` disagree, `spec.md` is stricter (it refines ambiguous rules such as the postcode being *exactly* 5 digits).
 
 Do not invent requirements beyond these documents. When a spec detail is unclear, prefer the most specific statement of it (e.g. `spec.md` FR-2.4 over the brief's range-only postcode rule).
 
-## Planned build/test commands
+## Build/test commands
 
-The .NET 10 SDK is installed (`dotnet --version` → 10.0.x). Per `tasks.md` T0.1, the solution will be:
+The .NET 10 SDK is installed (`dotnet --version` → 10.0.x). The solution (`tasks.md` T0.1):
 
 ```
 AddressTokenizer.sln
@@ -19,7 +21,7 @@ AddressTokenizer.sln
 └─ AddressTokenizer.Tests   (xUnit)
 ```
 
-Once scaffolded:
+Shared build properties (`TargetFramework`, `ImplicitUsings`, `Nullable`, `TreatWarningsAsErrors`) live centrally in `Directory.Build.props` — don't redeclare them in individual `.csproj` files.
 
 ```bash
 dotnet build                                        # zero warnings required (TreatWarningsAsErrors)
